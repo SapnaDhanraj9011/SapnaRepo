@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <style type="text/css">
+      canvas{
+        display: none;
+      }
+      #b3{
+        display: none;
+      }
+      #b2{
+        display: none;
+      }
+    </style>
+
+		<meta charset="utf-8">
+		<title>RegistrationForm_v7 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+	        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	        <!--<script type="text/javascript" src="js/jqery.min.js"></script>-->
+	        <!--<script type="text/javascript" src="js/bootstrap.mi.js"></script>-->
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<!--<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">-->
+		
+		<!-- STYLE CSS -->
+		<!--<link rel="stylesheet" href="css/style.css">-->
+                
+                <script src="{{url_for('static', filename='js/jqery.min.js')}}"></script>
+                <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
+                <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form method="post" action="/process">
+					<h3>Contact Us</h3>
+					
+					<label class="form-group">
+						<input type="text" name="name" class="form-control"  required>
+						<span>Your Name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" name="mail" class="form-control"  required>
+						<span for="">Your Mail</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<textarea name="msg" id="" class="form-control" required></textarea>
+						<span for="">Your Message</span>
+						<span class="border"></span>
+					</label>
+					<div id ='d1' align = "Center" style = "position: relative; top :20px;  left :0px;">
+    				<canvas height= "300" width= "600" style = "border:3px solid #000000" id="can" ></canvas>
+					<p id = "demo"></p>
+					<button id="b2" type="submit" value="submit" >Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+      <button id="b1">START CAPTCHA</button>
+      <button id="b3">RELOAD CAPTCHA</button>
+		</div>
+
+<!-- <script type="text/javascript" src = "js/Main.js"></script> -->
+<script src="{{url_for('static', filename='js/Main.js')}}"></script>
+	
+		
+	</body>
+</html>
